@@ -1,0 +1,3 @@
+administer dynamic tokens:
+  title: 'Administer dynamic tokens'
+  restrict access: TRUE

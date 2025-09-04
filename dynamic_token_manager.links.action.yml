@@ -1,0 +1,5 @@
+entity.dynamic_token_instance.add_form:
+  route_name: entity.dynamic_token_instance.add_form
+  title: 'Add dynamic token'
+  appears_on:
+    - entity.dynamic_token_instance.collection

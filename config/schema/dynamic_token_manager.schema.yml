@@ -1,0 +1,26 @@
+dynamic_token_manager.dynamic_token_instance.*:
+  type: config_entity
+  label: 'Dynamic token instance'
+  mapping:
+    id:
+      type: string
+      label: 'Machine name'
+    label:
+      type: label
+      label: 'Label'
+    status:
+      type: boolean
+      label: 'Status'
+    plugin:
+      type: string
+      label: 'Plugin ID'
+    speed:
+      type: integer
+      label: 'Speed (seconds)'
+    plugin_config:
+      type: mapping
+      label: 'Plugin configuration'
+      mapping:
+        target_datetime:
+          type: string
+          label: 'Target datetime (ISO8601 UTC)'
