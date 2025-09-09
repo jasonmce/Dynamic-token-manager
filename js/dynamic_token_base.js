@@ -28,9 +28,10 @@
      * @return {number} The parsed speed in milliseconds.
      */
     parseSpeed: function(el, defaultMs) {
-      var s = parseInt(el.getAttribute('data-speed'), 10);
-      if (isNaN(s) || s < 1) return defaultMs || 1000;
-      return s * 1000;
+      var speedMs = parseInt(el.getAttribute('data-speed'), 10);
+      return (isNaN(speedMs) || speedMs < 1)
+        ? defaultMs || 1000
+        : speedMs * 1000;
     },
 
     /**
@@ -41,9 +42,9 @@
      * @return {boolean} True if this is the first call, false otherwise.
      */
     once: function(flag, el) {
-      if (el.dataset[flag]) return false;
-      el.dataset[flag] = '1';
-      return true;
+      return el.dataset[flag]
+        ? false
+        : el.dataset[flag] = '1' && true;
     }
   };
 
