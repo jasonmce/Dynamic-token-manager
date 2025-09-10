@@ -17,10 +17,4 @@ dynamic_token_manager.dynamic_token_instance.*:
     speed:
       type: integer
       label: 'Speed (seconds)'
-    plugin_config:
-      type: mapping
-      label: 'Plugin configuration'
-      mapping:
-        target_datetime:
-          type: string
-          label: 'Target datetime (ISO8601 UTC)'
+

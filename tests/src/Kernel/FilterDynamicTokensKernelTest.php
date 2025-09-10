@@ -28,15 +28,19 @@ class FilterDynamicTokensKernelTest extends KernelTestBase {
   }
 
   public function testFilterReplacesTokens() {
-    $text = DynamicTextToken::create([
+    $entity_type_manager = $this->container->get('entity_type.manager');
+    $token_instance = $entity_type_manager->getStorage('dynamic_token_instance')->create([
       'id' => 'greeting',
       'label' => 'Greeting',
       'plugin' => 'dynamic_text_token',
       'speed' => 2,
-      'plugin_config' => ['values' => ['Hello', 'Hi'], 'seed' => 1],
+      'plugin_config' => [
+        'values' => ['Hello', 'Hi'],
+        'seed' => 1,
+      ],
       'status' => TRUE,
     ]);
-    $text->save();
+    $token_instance->save();
 
     // $filter = $this->container->get('plugin.manager.filter')->createInstance('dynamic_tokens', []);
     // $input = 'A [dynamic:greeting] to you';
