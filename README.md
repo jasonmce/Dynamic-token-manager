@@ -2,13 +2,20 @@
 
 The Dynamic Token Manager module provides a base framework for creating and managing dynamic tokens in Drupal. It offers a JavaScript foundation that other modules can extend to implement dynamic, time-based token functionality.
 
+## Note!
+This is only a manager module.  It is only useful once you install a [dynamic token plugin](#available-dynamic-tokens) for it to manage.
+
+## History
+
+During a technical interview about Drupal services and design patterns, I realized that my answer to a question was also a good way to get some hard coded javascript out of my personal website's [Profile](https://www.JasonMcEachen.com/profile) page.  A little refresher reading, rolling out a quick development scaffold, GPT coding with a handfull of fixes and improvements, and it was done.  I figured I would share it in case any of the design or architecture is useful to others.
+
 ## Table of contents
 
 - Features
 - Requirements
 - Installation
 - Configuration
-- Available
+- Available Dynamic Tokens
 - Extending
 - Maintainers
 
@@ -35,12 +42,12 @@ The Dynamic Token Manager module provides a base framework for creating and mana
             "type": "package",
             "package": {
                 "name": "jasonmce/dynamic_token_manager",
-                "version": "dev-main",
+                "version": "^1.0",
                 "type": "drupal-module",
                 "source": {
                     "url": "https://github.com/jasonmce/dynamic_token_manager.git",
                     "type": "git",
-                    "reference": "dev-main"
+                    "reference": "main"
                 }
             }
         },
@@ -49,7 +56,7 @@ The Dynamic Token Manager module provides a base framework for creating and mana
 2. Install the module using Composer:
 
 ```bash
-composer require jasonmce/dynamic_token_manager:dev-main
+composer require jasonmce/dynamic_token_manager:^1.0
 ```
 
 3. Enable the module through the Drupal admin interface or with Drush:
