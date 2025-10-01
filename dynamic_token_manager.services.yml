@@ -1,0 +1,5 @@
+services:
+  plugin.manager.dynamic_token:
+    class: Drupal\dynamic_token_manager\Plugin\DynamicTokenManager
+    parent: default_plugin_manager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']

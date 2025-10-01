@@ -1,0 +1,7 @@
+name: Dynamic Token Manager
+type: module
+description: Provides DynamicToken plugin type, config entity, admin UI, and a text filter to render dynamic tokens as spans.
+core_version_requirement: '^10 || ^11'
+package: Dynamic Tokens
+dependencies:
+  - drupal:filter

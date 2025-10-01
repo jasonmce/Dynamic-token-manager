@@ -1,0 +1,22 @@
+dynamic_token_manager.dynamic_token_instance.*:
+  type: config_entity
+  label: 'Dynamic token instance'
+  mapping:
+    id:
+      type: string
+      label: 'Machine name'
+    label:
+      type: label
+      label: 'Label'
+    status:
+      type: boolean
+      label: 'Status'
+    plugin:
+      type: string
+      label: 'Plugin ID'
+    speed:
+      type: integer
+      label: 'Speed (seconds)'
+    plugin_config:
+      type: dynamic_token_instance.plugin_config.[%parent.plugin]
+      label: 'Plugin configuration'

@@ -1,0 +1,6 @@
+dynamic_token_manager.collection:
+  title: 'Dynamic tokens'
+  description: 'Manage dynamic token instances.'
+  route_name: entity.dynamic_token_instance.collection
+  parent: system.admin_config_content
+  weight: 50

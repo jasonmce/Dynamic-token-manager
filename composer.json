@@ -1,0 +1,19 @@
+{
+    "name": "jasonmce/dynamic_token_manager",
+    "description": "Drupal module to manage dynamic tokens",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Jasonmce\\DynamicTokenManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JasonMcE",
+            "email": "github@brightshinyobject.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -1,0 +1,6 @@
+base:
+  js:
+    js/dynamic_token_base.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
